@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/43ae73b4aa2a5c61cefe.css" as="style"/><link rel="stylesheet" href="/_next/static/css/43ae73b4aa2a5c61cefe.css" data-n-g=""/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/webpack-4e582efe68f401073f15.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework-998f5b95ac98f74bab8f.js" as="script"/><link rel="preload" href="/_next/static/chunks/43481-280514135c7b3adb9781.js" as="script"/><link rel="preload" href="/_next/static/chunks/62168-646866730a0afa3b7493.js" as="script"/><link rel="preload" href="/_next/static/chunks/main-7e2e753fca1f45eed2e0.js" as="script"/><link rel="preload" href="/_next/static/chunks/53706-d09a138e6cd709547d22.js" as="script"/><link rel="preload" href="/_next/static/chunks/25396-7c202dfca7dd4a484721.js" as="script"/><link rel="preload" href="/_next/static/chunks/49909-39e42e72225fd86b3fa0.js" as="script"/><link rel="preload" href="/_next/static/chunks/8792-02da446de816dae9d9f0.js" as="script"/><link rel="preload" href="/_next/static/chunks/13692-5739462c0ba24bf7f2e2.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-85ce0337ab254104dc2d.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/docs/manual/v9.0.0/api/js/obj-51bcb73edbec743e518a.js" as="script"/></head><body><div id="__next"><h1 id="obj">Obj</h1><div><p>Provide utilities for Js.t.</p></div><h2 id="empty">empty</h2><pre><code class="language-res" metastring="sig">let empty: unit =&gt; {..}
+</code></pre><p><code>empty()</code> returns the empty object <code>{}</code>.</p><h2 id="assign">assign</h2><pre><code class="language-res" metastring="sig">let assign: ({..}, {..}) =&gt; {..}
+</code></pre><p><code>assign(target, source)</code> copies properties from source to target.
+Properties in <code>target</code> will be overwritten by properties in <code>source</code> if they have the same key.
+Returns <code>target</code>.</p><pre><code class="language-res" metastring="example">/* Copy an object */
+
+let obj = {&quot;a&quot;: 1}
+
+let copy = Js.Obj.assign(Js.Obj.empty(), obj)
+
+/* prints &quot;{ a: 1 }&quot; */
+Js.log(copy)
+
+/* Merge objects with same properties */
+
+let target = {&quot;a&quot;: 1, &quot;b&quot;: 1}
+let source = {&quot;b&quot;: 2}
+
+let obj = Js.Obj.assign(target, source)
+
+/* prints &quot;{ a: 1, b: 2 }&quot; */
+Js.log(obj)
+
+/* prints &quot;{ a: 1, b: 2 }&quot;, target is modified */
+Js.log(target)
+</code></pre><h2 id="keys">keys</h2><pre><code class="language-res" metastring="sig">let keys: Js.t&lt;&#x27;a&gt; =&gt; array&lt;string&gt;
+</code></pre><p><code>keys(obj)</code> returns an <code>array</code> of the keys of <code>obj</code>&#x27;s own enumerable properties.</p></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/docs/manual/v9.0.0/api/js/obj","query":{},"buildId":"S5HYsHOQBCfuIMfZ4LslI","runtimeConfig":{},"nextExport":true,"autoExport":true,"isFallback":false}</script><script nomodule="" src="/_next/static/chunks/polyfills-14689e3e48c095b2d3e7.js"></script><script src="/_next/static/chunks/webpack-4e582efe68f401073f15.js" async=""></script><script src="/_next/static/chunks/framework-998f5b95ac98f74bab8f.js" async=""></script><script src="/_next/static/chunks/43481-280514135c7b3adb9781.js" async=""></script><script src="/_next/static/chunks/62168-646866730a0afa3b7493.js" async=""></script><script src="/_next/static/chunks/main-7e2e753fca1f45eed2e0.js" async=""></script><script src="/_next/static/chunks/53706-d09a138e6cd709547d22.js" async=""></script><script src="/_next/static/chunks/25396-7c202dfca7dd4a484721.js" async=""></script><script src="/_next/static/chunks/49909-39e42e72225fd86b3fa0.js" async=""></script><script src="/_next/static/chunks/8792-02da446de816dae9d9f0.js" async=""></script><script src="/_next/static/chunks/13692-5739462c0ba24bf7f2e2.js" async=""></script><script src="/_next/static/chunks/pages/_app-85ce0337ab254104dc2d.js" async=""></script><script src="/_next/static/chunks/pages/docs/manual/v9.0.0/api/js/obj-51bcb73edbec743e518a.js" async=""></script><script src="/_next/static/S5HYsHOQBCfuIMfZ4LslI/_buildManifest.js" async=""></script><script src="/_next/static/S5HYsHOQBCfuIMfZ4LslI/_ssgManifest.js" async=""></script><script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript></body></html>
